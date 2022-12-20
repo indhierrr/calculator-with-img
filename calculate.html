@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<head>
+<title>Tes No 9</title>
+
+<style type="text/css">
+body{
+	background:url(../../gambar/flat-geometric-background_23-2148957201.jpg)
+	background-size: 100% 100%;
+	min-height:700px;
+}
+</style>
+<center>
+<body>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <form name="form">
+   <p>Nama :
+  <input type=text name="nama" size=45>
+   </p>
+   <p>&nbsp; </p>
+   <p>Angka 1 : 
+     <input type=text name="angka1" size=4><br><br>
+     Angka 2 :
+     <input name="angka2" type="text" size="4" />
+ </p>
+   <p>     Hasil : <input type="text" value="" name="total" size="10">
+     <input type=button name=submit onclick="reset()" value="Hapus">
+     
+  </p>
+   <p>
+     <input type=button name=submit onclick="tambah()" value="Penjumlahan">
+      <input type=button name=submit onclick="kurang()" value="Pengurangan">
+     <input type=button name=submit onclick="kali()" value="Perkalian">
+     <input type=button name=submit onClick="bagi()" value="Pembagian">
+   </p>
+ </form>
+</body>
+</center>
+<script LANGUAGE="JavaScript">
+ function cek(){
+	if(form.angka1.value == "" || form.angka2.value == ""){
+	 alert("Angka kosong");
+	 exit;
+	}
+ }
+ 
+ function tambah() {
+ cek();
+ a=eval(form.angka1.value); //mengisi variabel a dengan isi dari input name angka1
+ b=eval(form.angka2.value); //mengisi variabel b dengan isi dari input name angka2
+ c=a+b //menjumlahkan kedua variabel
+ form.total.value = c; //memberikan hasil penjumlahan ke input name total
+ }
+ 
+ function kali() {
+ cek();
+ a=eval(form.angka1.value);
+ b=eval(form.angka2.value);
+ c=a*b
+ form.total.value = c;
+ }
+ 
+ function kurang() {
+ cek();
+ a=eval(form.angka1.value);
+ b=eval(form.angka2.value);
+ c=a-b
+ form.total.value = c;
+ }
+ function bagi() {
+ cek();
+ a=eval(form.angka1.value);
+ b=eval(form.angka2.value);
+ c=a/b
+ form.total.value = c;
+ }
+ function reset() {
+ form.angka1.value="";
+ form.angka2.value="";
+ form.total.value = "";
+ }
+ </script>
+</head>
+
+</html>
